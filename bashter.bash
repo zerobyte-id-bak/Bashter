@@ -7,7 +7,6 @@ WGET=$(command -v wget)
 
 
 . ${BASHTER_CONFIG}
-echo -ne "" > ${TMPFILE}/form-lists.tmp.bshtr
 
 if [[ ! -d ${BASHTER_HOME}/.temp ]]
 then
@@ -18,6 +17,8 @@ then
 	echo "ERROR: Cannot make directory ${BASHTER_HOME}/.temp"
 	exit
 fi
+
+echo -ne "" > ${TMPFILE}/form-lists.tmp.bshtr
 
 function GetLinks() {
 	WEBSOURCECODE="${1}"
