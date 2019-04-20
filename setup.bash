@@ -42,7 +42,7 @@ Run script:
 OR
 # .${BASHTER_HOME}/bashter.bash
 
-OR YOU CAN CREATE A SYMLINK LIKE THIS!
+OR YOU CAN CREATE A SYMLINK LIKE THIS! (run as root)
 # ln -sf ${BASHTER_HOME}/bashter.bash /usr/bin/bashter
 And then
 # bashter
