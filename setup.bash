@@ -41,7 +41,7 @@ cat << EOF
 Run script:
 # bash ${BASHTER_HOME}/bashter.bash
 OR
-# .${BASHTER_HOME}/bashter.bash
+# ${BASHTER_HOME}/bashter.bash
 
 OR YOU CAN CREATE A SYMLINK LIKE THIS! (run as root)
 # ln -sf ${BASHTER_HOME}/bashter.bash /usr/bin/bashter
