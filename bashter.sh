@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASHTER_CONFIG="/home/novran/Bashter/CONFIG.bash"
+BASHTER_CONFIG="/path-to/CONFIG.bash"
 
 NC=$(command -v nc)
 WGET=$(command -v wget)
