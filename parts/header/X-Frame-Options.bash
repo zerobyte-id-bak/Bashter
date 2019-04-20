@@ -5,7 +5,7 @@ function XFrameOptions() {
 	WEBSOURCECODE=${2}
 	if [[ -z $(cat ${WEBSOURCECODE} | grep ^'<' | grep -i x-frame-options) ]];
 	then
-		echo "$(date +"[%H:%M:%S]") WARN: \"${URL}\" X-Frame-Options is not present"
+		echo "$(date +"[%H:%M:%S]") WARN: X-Frame-Options on \"${URL}\" is not present"
 	fi
 }
 
