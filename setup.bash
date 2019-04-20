@@ -27,7 +27,7 @@ echo "BASHTER_VERSION=\"3.0\"" >> ${BASHTER_HOME}/CONFIG.bash
 echo "RELEASED_DATE=\"21 April 2019\"" >> ${BASHTER_HOME}/CONFIG.bash
 cp -rf $(pwd)/* ${BASHTER_HOME}/
 rm ${BASHTER_HOME}/setup.bash
-sed -i "s/\/path-to\//${BASHTER_HOME}\//g" ${BASHTER_HOME}/bashter.bash
+sed -i "s|/path-to/|${BASHTER_HOME}/|g" ${BASHTER_HOME}/bashter.bash
 for BASH_FILE in $(find ${BASHTER_HOME}/ | grep bash$)
 do
 	chmod +x ${BASH_FILE}
