@@ -9,6 +9,16 @@ WGET=$(command -v wget)
 . ${BASHTER_CONFIG}
 echo -ne "" > ${TMPFILE}/form-lists.tmp.bshtr
 
+if [[ ! -d ${BASHTER_HOME}/.temp ]]
+then
+	mkdir ${BASHTER_HOME}/.temp
+fi
+if [[ ! -d ${BASHTER_HOME}/.temp ]]
+then
+	echo "ERROR: Cannot make directory ${BASHTER_HOME}/.temp"
+	exit
+fi
+
 function GetLinks() {
 	WEBSOURCECODE="${1}"
 	cat ${WEBSOURCECODE} | grep -o 'href=['"'"'"][^"'"'"']*['"'"'"]' | sed -e 's/^href=["'"'"']//' -e 's/["'"'"']$//'
