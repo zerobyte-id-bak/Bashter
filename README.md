@@ -34,7 +34,9 @@ You only need to change the extension, for example `.bash` => `.xbash`.
 
 ## How to Install
 > `git clone https://github.com/zerobyte-id/Bashter.git`
+
 > `cd Bashter/`
+
 > `bash setup.bash`
 
 ## Contributor:
