@@ -26,8 +26,8 @@ You only need to change the extension, for example `.bash` => `.bashx`.
 ## by Default:
 - Web Crawler
 - Gather Input Form
-- Detect CORS Missconfigured
-- Detect X-FRAME-OPTIONS missing (Clickjacking Potential)
+- Detect Missconfigured CORS
+- Detect missing X-FRAME-OPTIONS (Clickjacking Potential)
 - Detect Reflected XSS via URL
 - Detect Reflected XSS via Form
 - Detect HTTP Splitting Response via CRLF Injection
