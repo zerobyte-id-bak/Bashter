@@ -67,7 +67,7 @@ function CheckForm() {
 	TEMPDIR="${HOME_DIR}/bashter-tempdata"
 	CHECKEDFORMFILE="${TEMPDIR}/CHECKED-FORM.BASHTER-${PROC_ID}.TMP"
 	IFS=$'\n'
-	for FORM in $(cat ${SOURCECODE} | grep -Po '<form\K.*?(?=>)' | sed 's/^/<form/g' | sed 's/$/>/g')
+	for FORM in $(cat ${SOURCECODE} | perl -nle'print $& while m{<form\K.*?(?=>)}g' | sed 's/^/<form/g' | sed 's/$/>/g')
 	do
 		FORMPOST=$(echo $FORM | grep -o 'method=['"'"'"][^"'"'"']*['"'"'"]' | grep -i post)
 		if [[ ! -z $(cat ${CHECKEDFORMFILE} 2> /dev/null | grep ''$FORM'') ]]

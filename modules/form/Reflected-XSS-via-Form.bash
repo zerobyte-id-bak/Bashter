@@ -20,7 +20,7 @@ function XSSFormBased() {
 	SOURCECODE="${2}"
 
 	IFS=$'\n'
-	for FORM in $(curl -skL --connect-timeout 10 --max-time 10 -A "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0" "${PATHTARGET}" | sed ':a;N;$!ba;s/\n/ /g' | grep -Po '<form\K.*?(?=<\/form>)')
+	for FORM in $(curl -skL --connect-timeout 10 --max-time 10 -A "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0) Gecko/20100101 Firefox/59.0" "${PATHTARGET}" | sed ':a;N;$!ba;s/\n/ /g' | perl -nle'print $& while m{<form\K.*?(?=<\/form>)}g')
 	do
 		TEMPDIR="$(cd "$(dirname "$0")/../../bashter-tempdata" ; pwd -P)"
 		PROC_ID=$(echo `date +%Y%m%d%H%M%S`${RANDOM})
